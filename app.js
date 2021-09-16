@@ -3,15 +3,20 @@ var proxyUrl ="https://cors-anywhere.herokuapp.com/https://udibkl.github.io/cryp
 var apiKey ="coinranking205d89e6615953e6ed5037eb23f2173680d588773ab5b469"
 var data=document.getElementById("data")
 
-fetch(`${proxyUrl}${baseUrl}`, {
-    method: "GET",
-    headers: {
-        'Content-Type': 'application/json',
-        'x-access-token': `${apiKey}`,
-        'Access-Control-Allow-Origin': '*'
-    }
-}).then((response)=>{
-    if(response.ok){
+// fetch(`${proxyUrl}${baseUrl}`, {
+//     method: "GET",
+//     headers: {
+//         'Content-Type': 'application/json',
+//         'x-access-token': `${apiKey}`,
+//         'Access-Control-Allow-Origin': '*'
+//     }
+dataupdate();
+async function dataupdate()
+{
+    var response=await  fetch('https://api.coinranking.com/v2/coins');
+
+
+    
         response.json().then((json)=>{
             console.log(json.data.coins)
 
