@@ -1,5 +1,5 @@
 var baseUrl ="https://api.coinranking.com/v2/coins"
-var proxyUrl ="https://cors-anywhere.herokuapp.com/"
+var proxyUrl ="https://cors-anywhere.herokuapp.com/https://udibkl.github.io/crypto/"
 var apiKey ="coinranking205d89e6615953e6ed5037eb23f2173680d588773ab5b469"
 var data=document.getElementById("data")
 
