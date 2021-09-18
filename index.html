@@ -14,15 +14,15 @@
         <div class="container-fluid">
           <a class="navbar-brand  text-light" href="#">crypto</a>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input id="formcontrol" type="search" placeholder="Search" aria-label="Search" onkeyup="searchFun()">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </nav>
     
-<table class="table table-bordered" style="margin-top: 90px;">
+<table id="myTable" style="margin-top: 90px;">
     <thead>
-        <tr>
+        <tr class="myClass">
             <th scope="col">UUID</th>
             <th scope="col">BTC price</th>
             <th scope="col">Rank</th>
