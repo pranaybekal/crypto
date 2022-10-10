@@ -24,12 +24,13 @@ fetch(`${proxyUrl}${baseUrl}`, {
             }
 
             coinsData.forEach((coin)=> {
-              cryptoCoins += "<tr>" 
+              cryptoCoins += "<tr>"
+              cryptoCoins += `<td>  ${coin.name} </td>`; 
               cryptoCoins += `<td>  ${coin.uuid} </td>`;
               cryptoCoins += `<td>  ${coin.btcPrice} </td>`;
               cryptoCoins += `<td>  ${coin.rank} </td>`;
               cryptoCoins += `<td>  ${coin.tier} </td>`;
-              cryptoCoins += `<td>  ${coin.name} </td>`;
+              
               cryptoCoins += `<td>$${Math.round(coin.price)} Billon</td>`;
               cryptoCoins += `<td id="icon">  <img src=${coin.iconUrl}  style="width: 50px" > </td>`;"<tr>";
             })
